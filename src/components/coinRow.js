@@ -63,16 +63,15 @@ const defaultChart = {
          onMouseLeave={() => setOpen(false)}
     >
       <div className="coin-row-header">
-        <img src={coin.image.small}/>
         <div>{coin.name}</div>
-        <div>{coin.symbol}</div>
+        <div>{coin.description}</div>
       </div>
 
       {open && <div style={{fontSize: 16}}>
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
-          {coin.market_data.circulating_supply} Pezzi
+          {coin.id} Id
           <div style={{alignItems: 'center'}}>
-            <button onClick={onClickShowChart}>Show chart</button>
+            {/*<button onClick={onClickShowChart}>Show chart</button>*/}
             {loading && <CircularProgress/>}
           </div>
           <Loader/>
